@@ -51,7 +51,7 @@ namespace Team4
         Cue chickencluck;
         Cue chickendance;
         Cue footsteps;
-        Cue ambience;
+        //Cue ambience;
         Cue heartbeat1;
         Cue heartbeat2;
         Cue heartbeat3;
@@ -233,7 +233,7 @@ namespace Team4
             chickendance = soundbank.GetCue("chickendance");
             chickencluck = soundbank.GetCue("cluck2");
             footsteps = soundbank.GetCue("walking");
-            ambience = soundbank.GetCue("ambience");
+            //ambience = soundbank.GetCue("ambience");
             heartbeat1 = soundbank.GetCue("heartbeat1");
             heartbeat2 = soundbank.GetCue("heartbeat2");
             heartbeat3 = soundbank.GetCue("heartbeat3");
@@ -357,7 +357,7 @@ namespace Team4
             //update camera2 and check if it has finished
             if (activeCamera == CameraView.CAMERA2 && !end)
             {
-                ambience.Stop(AudioStopOptions.AsAuthored);
+                //ambience.Stop(AudioStopOptions.AsAuthored);
 
                 if (!chickendance.IsPlaying)
                 {
@@ -371,7 +371,7 @@ namespace Team4
 
             if (end)
             {
-                ambience.Stop(AudioStopOptions.AsAuthored);
+                //ambience.Stop(AudioStopOptions.AsAuthored);
                 shouldplayJumpScare = false;
 
                 //if (!chickendance.IsPlaying)
@@ -429,11 +429,11 @@ namespace Team4
             {
                 chickendance.Stop(AudioStopOptions.AsAuthored);
 
-                if (!ambience.IsPlaying)
+                /*if (!ambience.IsPlaying)
                 {
                     ambience = soundbank.GetCue("ambience");
                     ambience.Play();
-                }
+                }*/
 
                 HandleHeartBeat(ColSanders.Position, camera1.Position);
 
